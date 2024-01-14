@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Questionário</title>
+  <style>
+    /* Adicione estilos conforme necessário */
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #87d1f1;
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    h1 { 
+        text-align: center;
+    }
+    
+
+    label {
+      display: block;
+      margin-bottom: 10px;
+    }
+
+    input[type="text"],
+    input[type="radio"] {
+      margin-bottom: 10px;
+    }
+
+    button {
+      background-color: #245df9;
+      color: #fff;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      margin-right: 10px;
+      text-align: center;
+    }
+    #pergunta1, #pergunta2, #pergunta3 {
+      max-width: 600px;
+      margin: 20px auto;
+      background-color: #fff;
+      padding: 20px;
+      border-radius: 5px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .resultado {
+      margin-top: 10px;
+      font-weight: bold;
+    }
+
+    .resposta-correta {
+      color: rgb(53, 221, 151);
+    }
+
+    .resposta-incorreta {
+      color: rgb(255, 66, 66);
+    }
+  </style>
+</head>
+<body>
+
+  <form id="myForm">
+    <h1>Estilistica</h1>
+
+    <div id="pergunta1">
+      <label data-resposta-correta="e">1. (Enem 2013) Gripado, penso entre espirros em como a palavra gripe nos chegou após uma série de contágios entre línguas. Partiu da Itália em 1743 a epidemia de gripe que disseminou pela Europa, além do vírus propriamente dito, dois vocábulos virais: o italiano influenza e o francês grippe. O primeiro era um termo derivado do latim medieval influentia, que significava “influência dos astros sobre os homens”. O segundo era apenas a forma nominal do verbo gripper, isto é, “agarrar”. Supõe-se que fizesse referência ao modo violento como o vírus se apossa do organismo infectado. RODRIGUES, S. “Sobre palavras”. Veja, São Paulo, 30 nov. 2011. Para se entender o trecho como uma unidade de sentido, é preciso que o leitor reconheça a ligação entre seus elementos. Nesse texto, a coesão é construída predominantemente pela retomada de um termo por outro e pelo uso da elipse. O fragmento do texto em que há coesão por elipse do sujeito é:</label>
+      <label for="a1"><input type="radio" id="a1" name="resposta1" value="a"> “a) […] a palavra gripe nos chegou após uma série de contágios entre línguas.”</label>
+      <label for="b1"><input type="radio" id="b1" name="resposta1" value="b"> “b) Partiu da Itália em 1743 a epidemia de gripe […]”.</label>
+      <label for="c1"><input type="radio" id="c1" name="resposta1" value="c"> “c) O primeiro era um termo derivado do latim medieval influentia, que significava ‘influência dos astros sobre os homens’.”</label>
+      <label for="d1"><input type="radio" id="d1" name="resposta1" value="d"> “d) O segundo era apenas a forma nominal do verbo gripper […]”.</label>
+      <label for="e1"><input type="radio" id="e1" name="resposta1" value="e"> “e) Supõe-se que fizesse referência ao modo violento como o vírus se apossa do organismo infectado.”</label>
+      <div class="resultado" id="resultado1"></div>
+      <button type="button" onclick="verificarRespostasIndividual(1, 'e')">Verificar Resposta</button>
+    </div>
+
+    <div id="pergunta2">
+      <label data-resposta-correta="jupiter">1. (Enem 2013)1. </label>
+      <img src="questao.png" alt="">
+      <label data-resposta-correta="jupiter">O poema de Oswald de Andrade remonta à ideia de que a
+        brasilidade está relacionada ao futebol. Quanto à questão da
+        identidade nacional, as anotações em torno dos versos
+        constituem </label>
+      <label for="a2"><input type="radio" id="a2" name="resposta2" value="a"> a) direcionamentos possíveis para uma leitura crítica de dados histórico-culturais.</label>
+      <label for="b2"><input type="radio" id="b3" name="resposta2" value="b"> b) forma clássica da construção poética brasileira.</label>
+      <label for="c2"><input type="radio" id="c2" name="resposta2" value="c"> c) rejeição à ideia do Brasil como o país do futebol.</label>
+      <label for="d2"><input type="radio" id="d2" name="resposta2" value="d">d) intervenções de um leitor estrangeiro no exercício de leitura poética</label>
+      <label for="e2"><input type="radio" id="e2" name="resposta2" value="e">e) lembretes de palavras tipicamente brasileira  substitutivas das originais.</label>
+      <div class="resultado" id="resultado2"></div>
+    <button type="button" onclick="verificarRespostasIndividual(2, 'a')">Verificar Resposta</button>
+    </div>
+
+
+    <div id="pergunta3">
+      <label data-resposta-correta="d"> 3  (Enem 2013) Lusofonia rapariga: s.f., fem. de rapaz: mulher nova; moça; menina; (Brasil), meretriz. Escrevo um poema sobre a rapariga que está sentada no café, em frente da chávena de café, enquanto alisa os cabelos com a mão. Mas não posso escrever este poema sobre essa rapariga porque, no Brasil, a palavra rapariga não quer dizer o que ela diz em Portugal. Então, terei de escrever a mulher nova do café, a jovem do café, a menina do café, para que a reputação da pobre rapariga que alisa os cabelos com a mão, num café de Lisboa, não fique estragada para sempre quando este poema atravessar o Atlântico para desembarcar no Rio de Janeiro. E isto tudo sem pensar em África, porque aí lá terei de escrever sobre a moça do café, para evitar o tom demasiado continental da rapariga, que é uma palavra que já me está a pôr com dores de cabeça até porque, no fundo, a única coisa que eu queria era escrever um poema sobre a rapariga do café. A solução, então, é mudar de café, e limitar-me a escrever um poema sobre aquele café onde nenhuma rapariga se pode sentar à mesa porque só servem café ao balcão. JÚDICE, N. Matéria do Poema. Lisboa: D. Quixote, 2008. O texto traz em relevo as funções metalinguística e poética. Seu caráter metalinguístico justifica-se pela</label>
+      <label for="a3"><input type="radio" id="a3" name="resposta3" value="a"> “a) discussão da dificuldade de se fazer arte inovadora no mundo contemporâneo.”</label>
+      <label for="b3"><input type="radio" id="b3" name="resposta3" value="b"> “b) defesa do movimento artístico da pós-modernidade, típico do século XX.”</label>
+      <label for="c3"><input type="radio" id="c3" name="resposta3" value="c"> “c) abordagem de temas do cotidiano, em que a arte se volta para assuntos rotineiros.”</label>
+      <label for="d3"><input type="radio" id="d3" name="resposta3" value="d"> “d) tematização do fazer artístico, pela discussão do ato de construção da própria obra.”</label>
+      <div class="resultado" id="resultado3"></div>
+      <button type="button" onclick="verificarRespostasIndividual(3, 'd')">Verificar Resposta</button>
+    </div>
+
+    <!-- Adicione mais perguntas conforme necessário -->
+
+    <button type="button" onclick="verificarRespostas()">Enviar Respostas</button>
+  </form>
+
+  <script>
+    function verificarRespostas() {
+      verificarRespostasIndividual(1, "e");
+      verificarRespostasIndividual(2, "a");
+      verificarRespostasIndividual(3, "d");
+      // Adicione chamadas para mais perguntas conforme necessário
+    }
+
+    function verificarRespostasIndividual(pergunta, respostaCorreta) {
+      const respostaSelecionada = document.querySelector(`input[name="resposta${pergunta}"]:checked`);
+      const resultadoElement = document.getElementById(`resultado${pergunta}`);
+
+      if (!respostaSelecionada) {
+        resultadoElement.textContent = "Por favor, preencha todas as respostas.";
+        resultadoElement.className = "resposta-incorreta";
+        return;
+      }
+
+      const respostaSelecionadaValue = respostaSelecionada.value;
+
+      if (respostaSelecionadaValue === respostaCorreta) {
+        resultadoElement.textContent = `Parabéns! A resposta está correta.`;
+        resultadoElement.className = "resposta-correta";
+      } else {
+        resultadoElement.textContent = `Infelizmente, a resposta está incorreta.`;
+        resultadoElement.className = "resposta-incorreta";
+      }
+    }
+  </script>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
